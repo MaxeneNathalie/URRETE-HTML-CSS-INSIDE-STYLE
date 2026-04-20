@@ -132,6 +132,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 .header_wrapper {
   display: flex;
@@ -209,4 +210,33 @@ p {
 .banner_img img:last-child {
   position: relative;
   top: 2.5rem;
+}
+.homeAbout {
+  padding: 3rem 0;
+  background-color: var(--clr-dark);
+}
+
+.homeAbout_title h2 {
+  color: var(--clr-primary);
+  padding: 3rem 0;
+  font-weight: 500;
+  font-size: 3rem;
+}
+.homeAbout h2::before {
+  position: relative;
+  display: inline-block;
+  content: "";
+  background-color: var(--clr-primary);
+  height: 0.2rem;
+  width: 120rem;
+  bottom: 1rem;
+  right: 1rem;
+}
+.homeAbout_text {
+  color: var(--clr-light);
+}
+.homeAbout_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  align-items: center;
 }
