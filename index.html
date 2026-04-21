@@ -6,6 +6,10 @@
     <title>Inside Style - Home</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
   </head>
   <body>
     <!--  header  -->
@@ -24,6 +28,12 @@
               <li><a href="./catalog.html">CATALOG</a></li>
               <li><a href="./contact.html">CONTACT</a></li>
             </ul>
+            <!-- toggle menu  -->
+            <div class="toggle_menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </nav>
         </div>
       </div>
@@ -58,7 +68,7 @@
               provident! Sit voluptatibus rem accusantium est error ratione
               facere saepe?
             </p>
-            <a href="#">Learn More</a>
+            <a href="#" class="btn--with-bg btn--semilight">Learn More</a>
           </div>
           <div class="banner_img">
             <img src="./img/banner-1.png" alt="Interior Design" />
@@ -128,5 +138,86 @@
         </div>
       </div>
     </section>
+    <!-- home catalog -->
+    <section class="homeCatalog">
+      <div class="container">
+        <div class="homeCatalog_title">
+          <h2>Catalog</h2>
+        </div>
+        <div class="homeCatalog_wrapper">
+          <div class="card">
+            <img src="./img/catalog-1.png" alt="Interior Design" />
+            <div class="card_details">
+              <h4>Boho Theme</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                ullam laborum atque reiciendis, eligendi esse?
+              </p>
+              <a href="#" class="btn--without-bg">Read more...</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/catalog-2.png" alt="Interior Design" />
+            <div class="card_details">
+              <h4>Minimalist Theme</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                ullam laborum atque reiciendis, eligendi esse?
+              </p>
+              <a href="#" class="btn--without-bg">Read more...</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/catalog-3.png" alt="Interior Design" />
+            <div class="card_details">
+              <h4>Traditional Theme</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                ullam laborum atque reiciendis, eligendi esse?
+              </p>
+              <a href="#" class="btn--without-bg">Read more...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta_text">
+          <h4>Feel free to talk about your desired style</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+            ipsam!
+          </p>
+          <a href="#" class="btn--with-bg btn--semilight">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_wrapper">
+          <ul class="footer_social">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"></a><i class="fa-brands fa-square-x-twitter"></i>
+            </li>
+            <li>
+              <a href="#"></a><i class="fa-brands fa-square-instagram"></i>
+            </li>
+            <li><a href="#"></a><i class="fa-brands fa-youtube"></i></li>
+            <li><a href="#"></a><i class="fa-solid fa-envelope"></i></li>
+          </ul>
+
+          <p>Baloc Road. San Ignacio San Pablo City, Laguna 4000</p>
+          <p>©INSIDESTYLE</p>
+        </div>
+      </div>
+    </footer>
+    <!-- script -->
+    <script src="./script.js"></script>
   </body>
 </html>
