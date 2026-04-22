@@ -263,6 +263,18 @@ img {
   position: relative;
   top: 2.5rem;
 }
+/* tablet responsiveness - home banner */
+@media screen and (max-width: 1024px) {
+  .banner_wrapper {
+    gap: 2rem;
+  }
+  .banner_text p {
+    max-width: 50rem;
+  }
+  .banner_img img {
+    width: 30rem;
+  }
+}
 /* mobile responsiveness - home banner */
 @media screen and (max-width: 520px) {
   .banner_wrapper {
@@ -313,6 +325,17 @@ img {
   grid-template-columns: 1fr 2.5fr;
   align-items: center;
 }
+
+/* tablet responsiveness - home about */
+@media screen and (max-width: 1024px) {
+  .homeAbout_title h2::before {
+    width: 60rem;
+  }
+  .homeAbout_wrapper {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+  }
+}
 /* mobile responsiveness - home about */
 @media screen and (max-width: 520px) {
   .homeAbout_title h2 {
@@ -356,6 +379,16 @@ img {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   margin-top: 3rem;
+}
+/* tablet responsiveness - home catalog */
+@media screen and (max-width: 1024px) {
+  .homeCatalog_title h2::after {
+    width: 80rem;
+  }
+  .homeCatalog_wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
 }
 /* mobile responsiveness - home catalog */
 @media screen and (max-width: 520px) {
@@ -531,6 +564,16 @@ img {
   bottom: 0.3rem;
   right: 1rem;
 }
+/* tablet responsiveness - about section */
+@media screen and (max-width: 1024px) {
+  .about_wrapper {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+  }
+  .aboutDesigner_title h4::before {
+    width: 25rem;
+  }
+}
 /* mobile responsiveness - about section */
 @media screen and (max-width: 520px) {
   .about_wrapper {
@@ -590,7 +633,13 @@ img {
 .latestStyle_wrapper p {
   color: var(--clr-dark);
 }
-
+/* tablet responsiveness - latest style */
+@media screen and (max-width: 1024px) {
+  .latestStyle_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
 /* mobile responsiveness - latest style */
 @media screen and (max-width: 520px) {
   .latestStyle_wrapper {
@@ -645,50 +694,302 @@ img {
   color: var(--clr-dark);
   text-align: center;
 }
+/* tablet responsiveness - catalog section */
+@media screen and (max-width: 1024px) {
+  .catalog_text h1 {
+    font-size: 5rem;
+  }
+}
+/* mobile responsiveness - catalog section */
+@media screen and (max-width: 520px) {
+  .catalog_text h1 {
+    font-size: 4rem;
+  }
+  .catalog_text p {
+    font-size: 1.4rem;
+  }
+}
 
 /* interior design section */
 .interiorDesign {
   padding: 3rem 0;
 }
-.interior_wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.interiorDesign_title h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.interiorDesign_item {
+  margin-bottom: 10rem;
+}
+.interiorDesign_list
+  .interiorDesign_item:nth-child(even)
+  .interiorDesign_wrapper {
+  flex-direction: row-reverse;
+}
+.interiorDesign_wrapper {
+  display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
 }
-
-.interiorDesign {
+.interiorDesign_text {
+  max-width: 70rem;
+}
+.interiorDesign_item {
   position: relative;
 }
-.interior_sample {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.interior_img {
-  width: 80rem;
-  height: 50rem;
-}
-
-.interior_img::before {
+.interiorDesign_list
+  .interiorDesign_item:nth-child(odd)
+  .interiorDesign_img::before {
   position: absolute;
   display: inline-block;
   content: "";
   background-color: var(--clr-secondary);
-  height: 40rem;
-  width: 60rem;
+  height: 46rem;
+  width: 70rem;
   z-index: -1;
-  left: 0;
-  top: 0;
+  left: 0rem;
+  top: -3rem;
 }
-.interior_title h2 {
-  color: var(--clr-primary);
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: center;
+.interiorDesign_list
+  .interiorDesign_item:nth-child(even)
+  .interiorDesign_img::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background-color: var(--clr-secondary);
+  height: 46rem;
+  width: 70rem;
+  z-index: -1;
+  right: 0rem;
+  top: -3rem;
 }
-.interior_text h3 {
+.interiorDesign_text h3 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--clr-primary);
+}
+.interiorDesign_text p {
+  margin: 1rem 0;
+}
+/* tablet responsiveness - interior design */
+@media screen and (max-width: 1024px) {
+  .interiorDesign_wrapper {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .interiorDesign_item {
+    margin-bottom: 5rem;
+  }
+  .interiorDesign_list
+    .interiorDesign_item:nth-child(even)
+    .interiorDesign_wrapper {
+    flex-direction: column;
+  }
+  .interiorDesign_text h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .interiorDesign_text p {
+    font-size: 1.8rem;
+  }
+  .interiorDesign_list
+    .interiorDesign_item:nth-child(odd)
+    .interiorDesign_img::before {
+    height: 30rem;
+    width: 70rem;
+  }
+  .interiorDesign_list
+    .interiorDesign_item:nth-child(even)
+    .interiorDesign_img::after {
+    height: 30rem;
+    width: 70rem;
+  }
+  .interiorDesign_title h2 {
+    font-size: 3rem;
+  }
+}
+/* mobile responsiveness - interior design */
+@media screen and (max-width: 520px) {
+  .interiorDesign_wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .interiorDesign_title h2 {
+    font-size: 2.5rem;
+  }
+  .interiorDesign_item {
+    margin-bottom: 10rem;
+  }
+
+  .interiorDesign_list
+    .interiorDesign_item:nth-child(even)
+    .interiorDesign_wrapper {
+    flex-direction: column;
+  }
+
+  .interiorDesign_text h3 {
+    font-size: 2rem;
+  }
+  .interiorDesign_text p {
+    font-size: 1.6rem;
+  }
+  .interiorDesign_list
+    .interiorDesign_item:nth-child(odd)
+    .interiorDesign_img::before {
+    height: 20rem;
+    width: 70rem;
+  }
+  .interiorDesign_list
+    .interiorDesign_item:nth-child(even)
+    .interiorDesign_img::after {
+    height: 20rem;
+    width: 70rem;
+  }
+}
+/* contact section */
+.contact {
+  padding: 22rem 0 18.3rem 0;
+}
+.contact_text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+.contact_wrapper {
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 10rem;
+}
+.form_group input,
+.form_group textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--clr-dark);
+  padding: 3rem 0 1rem 1.5rem;
+  font-size: 1.6rem;
+}
+
+.form_group textarea {
+  height: 15rem;
+}
+.form_group input::placeholder,
+.form_group textarea::placeholder {
+  font-family: var(--font);
+}
+
+/* button */
+.contact_btn {
+  background-color: var(--clr-dark);
+  border: none;
+  border-radius: 2.5rem;
+  padding: 0.3rem 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-light);
+  width: 78rem;
+  margin-top: 2rem;
+  letter-spacing: 1.2rem;
+  font-family: var(--font);
+}
+
+.contact_btn:hover {
+  background-color: var(--clr-primary);
+  transition: all 0.5s ease-in-out;
+}
+
+/* contact info */
+.contact_info {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+.contact_info h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.contact_item li {
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 14rem;
+}
+.contact_item i {
+  color: var(--clr-secondary);
+  width: 4rem;
+  align-items: center;
+}
+
+/* tablet responsiveness - contact */
+@media screen and (max-width: 1024px) {
+  .contact {
+    margin-bottom: 3.9rem;
+  }
+  .contact_text h1 {
+    font-size: 3.5rem;
+  }
+  .contact_wrapper {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 5rem;
+  }
+  .form_group input,
+  .form_group textarea {
+    padding: 2rem 0 1rem 1.5rem;
+    width: 50rem;
+  }
+  .contact_btn {
+    width: 50rem;
+    letter-spacing: 0.5rem;
+  }
+  .contact_info {
+    padding: 0 0 2rem 0 2rem;
+  }
+  .contact_info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .contact_item li {
+    padding-left: 7rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* mobile responsiveness - contact */
+@media screen and (max-width: 520px) {
+  .contact_text h1 {
+    font-size: 3rem;
+  }
+  .contact_wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .form_group input,
+  .form_group textarea {
+    padding: 2rem 0 1rem 1.5rem;
+    width: 40rem;
+  }
+  .contact_btn {
+    width: 40rem;
+    letter-spacing: 0.5rem;
+  }
+  .contact_info {
+    padding: 2rem;
+    margin-top: 13rem;
+  }
+  .contact_info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .contact_item li {
+    padding-left: 8rem;
+    font-size: 1.5rem;
+  }
 }
